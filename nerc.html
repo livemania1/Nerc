@@ -15,21 +15,25 @@
     </div>
     <script>
         const manifestUri =
-            "https://linear-novi.stvacdn.spectrum.com/LIVE/1131/dash/cenc/WLLOHD_10364/manifest.mpd";
+            "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd";
         
         async function init() {
-       
           const video = document.getElementById('video');
           const ui = video['ui'];
           const controls = ui.getControls();
           const player = controls.getPlayer();
-       
+          const config ={
+            'controlpanelElements': ['play_pause','rewind', 'fast_forward', 'spacer', 
+            'mute', 'volume', 'quality','fullscreen']
+          }
+          ui.configure(config);  
+
           window.player = player;
           window.ui = ui;
           player.configure({
                 drm: {
                     "clearKeys": {
-                        '6653c05e42fc4fac8f49d7cbf99498fe': '3b88f2cff3affef20b265c840bafc0cc'
+                        "537f3bebea2eb2ed32af574990124817": "30d7653d92f1043638da130ddb2e2b7c"
                     }
                 }
             });
@@ -75,4 +79,3 @@
         
   </body>
 </html>
-
