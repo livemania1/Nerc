@@ -1,79 +1,347 @@
-<!DOCTYPE html>
-<script language="javascript">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #333;
+          color: #ffffff;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.6;
+      }
 
-// alert('Join Our Telegram For Latest update')
-         if (confirm("Join Our Telegram Channel @cricket_Mania_24 For Latest Update") == true) {
-         window.open("https://telegram.me/cricket_Mania_24/", '_blank');
-     }
-</script>'));</script>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
-    <style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection">
-    <div id="player-container">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css"crossorigin="anonymous">
-    <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-      <body bgcolor="black" style="margin:0">
+      header {
+          background-color: #222;
+          color: #ffffff;
+          text-align: center;
+          padding: 1em 0;
+          box-sizing: border-box;
+          font-size: 1.5em;
+          border-bottom: 2px solid #444;
+          margin-bottom: 10px;
+      }
 
+      header h1 {
+          margin: 0;
+          font-size: 1.5em;
+      }
 
-    <center>
-            <div data-shaka-player-container="" style="width: 100%; height: 100%" class="shaka-mobile shaka-video-container" shaka-controls="true">
-            <video poster="" autoplay="" data-shaka-player="" id="video" style="width:100%;height:100%;" class="shaka-video" src="blob:https://tnt1-criccoder.vercel.app/f4ee7a76-3283-4a88-99db-a839c2081e21"></video>
-        <canvas class="shaka-canvas-container"></canvas><div class="shaka-controls-container" shown="true"><div class="shaka-scrim-container"></div><div class="shaka-hidden-fast-forward-container"><div class="shaka-fast-foward-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_forward</span></div></div><div class="shaka-hidden-rewind-container"><div class="shaka-rewind-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_rewind</span></div></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-resolutions"><button type="button" class="shaka-back-to-overflow-button" aria-label="Resolution"><i class="material-icons-round">arrow_back</i><span>Resolution</span></button><button type="button" class="explicit-resolution"><span>1080p</span></button><button type="button" class="explicit-resolution"><span>720p</span></button><button type="button" class="explicit-resolution"><span>576p</span></button><button type="button" class="explicit-resolution"><span>432p</span></button><button type="button" class="explicit-resolution"><span>288p</span></button><button type="button" class="explicit-resolution"><span>144p</span></button><button type="button" class="shaka-enable-abr-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">Auto</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-audio-languages"><button type="button" class="shaka-back-to-overflow-button" aria-label="Back"><i class="material-icons-round">arrow_back</i><span>Language</span></button><button type="button" aria-selected="true"><span class="shaka-chosen-item">English</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-playback-rates"><button type="button" class="shaka-back-to-overflow-button" aria-label="Back"><i class="material-icons-round">arrow_back</i><span>Playback speed</span></button><button type="button"><span>0.5x</span></button><button type="button"><span>0.75x</span></button><button type="button"><span>1x</span></button><button type="button"><span>1.25x</span></button><button type="button"><span>1.5x</span></button><button type="button"><span>1.75x</span></button><button type="button"><span>2x</span></button></div></div><div class="shaka-client-side-ad-container shaka-hidden"></div><div class="shaka-spinner-container shaka-hidden"><div class="shaka-spinner"><svg class="shaka-spinner-svg" viewBox="0 0 30 30"><circle class="shaka-spinner-path" cx="15" cy="15" r="14.5" fill="none" stroke-width="1" stroke-miterlimit="10"></circle></svg></div></div><div class="shaka-text-container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;"></div></div>
-    </center>
-      
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 10px;
+          box-sizing: border-box;
+      }
 
-    <script>
-        const manifestUri =
-            "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd";
-        
-        async function init() {
-          const video = document.getElementById('video');
-          const ui = video['ui'];
-          const controls = ui.getControls();
-          const player = controls.getPlayer();
-        
-          window.player = player;
-          window.ui = ui;
-            player.configure({
-                drm: {
-                    "clearKeys": {
-                        'a93c1cbfdccd23233bac13540c693e7f': '2f6ab2e6693eb847eff3c9da8f9d01fc'
-                    }
-                }
-            });
-        
-          player.addEventListener('error', onPlayerErrorEvent);
-          controls.addEventListener('error', onUIErrorEvent);
-        
-          try {
-            await player.load(manifestUri);
-            console.log('The video has now been loaded!');
-          } catch (error) {
-            onPlayerError(error);
+      .site-grid {
+          display: grid;
+          gap: 10px;
+          margin-top: 10px;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .site-card {
+          background-color: #444;
+          border: 1px solid #333;
+          border-radius: 18px;
+          overflow: hidden;
+          transition: transform 0.3s ease-in-out;
+          text-decoration: none;
+          color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+      }
+
+      .site-card:hover {
+          transform: scale(1.05);
+      }
+
+      .site-card img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 18px 18px 0 0;
+      }
+
+      .site-info {
+          padding: 10px;
+          text-align: center;
+          flex-grow: 1;
+      }
+
+      .site-info h2 {
+          margin: 0;
+          font-size: 1.2em;
+      }
+
+      .site-link {
+          margin-top: 10px;
+          color: #ffffff;
+          text-decoration: none;
+          background-color: #3498db;
+          padding: 10px;
+          border-radius: 5px;
+          display: inline-block;
+          transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .site-link:hover {
+          background-color: #2c3e50;
+          color: #ffffff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .announcement {
+          background-color: #444;
+          color: #ffffff;
+          padding: 10px;
+          margin: 15px 0;
+          border-radius: 20px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .announcement p {
+          margin: 0;
+          font-size: 1.0em;
+      }
+
+      .rectangle {
+          width: 100%;
+          height: 10px;
+          background-color: #3498db;
+          margin-top: 5px;
+          border-radius: 6px;
+      }
+
+      .github-button {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-decoration: none;
+          color: #fff;
+          background-color: #4CAF50;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+      }
+
+      .github-button:hover {
+          background-color: #45a049;
+      }
+
+      .github-icon {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+      }
+    .telegram-button {
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-decoration: none;
+          color: #fff;
+          background-color: #0088cc; /* Use the color you prefer for Telegram */
+          border-radius: 5px;
+          margin-left: 10px; /* Adjust the margin as needed */
+          transition: background-color 0.3s ease;
+      }
+
+      .telegram-button:hover {
+          background-color: #006699; /* Adjust the hover color as needed */
+      }
+
+      .telegram-icon {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+      }
+
+      /* Media Query for Small Screens */
+      @media only screen and (max-width: 600px) {
+          .site-card {
+              width: 100%;
           }
-        }
-        
-        function onPlayerErrorEvent(errorEvent) {
-          onPlayerError(event.detail);
-        }
-        
-        function onPlayerError(error) {
-          console.error('Error code', error.code, 'object', error);
-        }
-        
-        function onUIErrorEvent(errorEvent) {
-          onPlayerError(event.detail);
-        }
-        
-        function initFailed(errorEvent) {
-          console.error('Unable to load the UI library!');
-        }
-        
-        document.addEventListener('shaka-ui-loaded', init);
-        document.addEventListener('shaka-ui-load-failed', initFailed);
-        </script>
-  </body>
-</html>
+
+          .site-grid {
+              grid-template-columns: repeat(3, 1fr);
+          }
+      }
+  </style>
+<style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection"></head>
+
+<body>
+  <header>
+      <h1>chelsea vs Aston Villa</h1>
+      <!-- GitHub Star Button -->
+    <a href="https://telegram.me/footballs_streaming" class="telegram-button" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240104/Telegram_logo.svg.4prhaum59ki0.webp" alt="Telegram" class="telegram-icon">
+          Join us on Telegram
+      </a>
+  </header>
+         
+        <div class="site-grid">
+
+       
+
+              <!--<a href="Link" class="site-card" _self="_blank">
+                <img src="https://v3img.voot.com/v3Storage/assets/ind_vs_afg_series_preview_clean_ctv-1704912109161.jpg" alt="Site 2">
+                <div class="site-info">
+                    <h2>IND VS AFG HINDI</h2>  
+                </div>
+            </a>
+
+            <a href="Link" class="site-card" _self="_blank">
+                <img src="https://v3img.voot.com/v3Storage/assets/ind_vs_afg_series_preview_clean_ctv-1704912109161.jpg" alt="Site 2">
+                <div class="site-info">
+                    <h2>IND VS AFG ENGLISH</h2>  
+                </div>
+                  </a>   <!-- 
+         <!-- <a href="https://kratosrepo.github.io/cricket-live/sports18khel" class="site-card" _self="_blank">
+              <img src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sports18_Khel.png" alt="sports 18 khel">
+              <div class="site-info">
+                  <h2>sports 18 khel</h2>  
+              </div>
+          </a>-->
+
+            <!--<a href="https://kratosrepo.github.io/cricket-live/sports18HD" class="site-card" _self="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/Sports18_1_HD.4gj2dorrwoi0.webp" alt="Sports18 1 HD">
+                <div class="site-info">
+                    <h2>Sports18 1 HD</h2> 
+                </div>
+            </a>-->
+
+            <!--<a href="https://kratosrepo.github.io/cricket-live/sports18HD(alt)" class="site-card" _self="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/Sports18_1_HD.4gj2dorrwoi0.webp" alt="Sports18 1 HD(alt)">
+                <div class="site-info">
+                    <h2>Sports18 1 HD(alt)</h2>  
+                </div>-->
+            
+
+          
+
+          <a href="http://d22d.vercel.app/D22d.html" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/8gz5zX6/msg6000698482-32419.jpg" alt="link-1">
+              <div class="site-info">
+                  <h2>link-1</h2>  
+              </div>
+          </a>
+           
+         <a href="https://bns3.vercel.app/bns3.html" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/FWbfKF9/msg6000698482-32420.jpg" alt="linnk-2">
+              <div class="site-info">
+                  <h2>Link-2</h2>  
+              </div>
+          </a>
+           <a href="http://z-gsvbn.vercel.app/zGsvbn.html" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/X5dX9vN/msg6000698482-32421.jpg" alt="link-3">
+              <div class="site-info">
+                  <h2>Link-3</h2>  
+              </div>
+          </a>
+
+          <a href="https://stareng-criccoder.vercel.app/" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/L1rdJwD/msg6000698482-32422.jpg" alt="Link-4">
+              <div class="site-info">
+                  <h2> Link-4</h2>  
+              </div>
+          </a>
+
+          <a href="" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/XX9GDG0/msg6000698482-32423.jpg" alt="">
+              <div class="site-info">
+                  <h2></h2>  
+              </div>
+          </a>
+         <!-- <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/hMzp5kJ/New-Project-4-4-FF9753.png" alt="Star Sports 2 HD">
+              <div class="site-info">
+                  <h2>Sony Ten 1 HD</h2>  
+              </div>
+          </a>
+          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/DMj4fXx/New-Project-4-7427-E68.png" alt="Star Sports 2 HD">
+              <div class="site-info">
+                  <h2>Sony Ten 2 HD</h2>  
+              </div>
+          </a>
+          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/DRRL1FF/New-Project-4-5861683.png" alt="Star Sports 2 HD">
+              <div class="site-info">
+                  <h2>Sony Ten 3 HD</h2>  
+              </div>
+          </a>
+          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/8b484B2/New-Project-4-286-C136.png" alt="Star Sports 2 HD">
+              <div class="site-info">
+                  <h2>Sony Ten 4 HD</h2>  
+              </div>
+          </a>
+          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/4WRynLH/New-Project-4-9-DA8-AB0.png" alt="Star Sports 2 HD">
+              <div class="site-info">
+                  <h2>Sony Ten 5 HD</h2>  
+              </div>
+          </a>
+          <a href="" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/7WDkngd/image-downloader-1705144411795-png.webp" alt="Star Sports 2 HD">
+              <div class="site-info">
+                  <h2>Sports 18-1 Hd</h2>  
+              </div>
+          </a>-->
+          <a href="" class="site-card" _self="_blank">
+              <img src="https://i.ibb.co/XX9GDG0/msg6000698482-32423.jpg" alt="">
+              <div class="site-info">
+                  <h2></h2>  
+              </div>
+          </a>
+
+          <!--<a href="https://kratosrepo.github.io/cricket-live/skymain" class="site-card" _self="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/kratos877/picx-images-hosting@master/20231227/Sky-sports-main-event.2jqhzbjq3t20.webp" alt="Sky sports Mix">
+              <div class="site-info">
+                  <h2>Sky sports MAin Event</h2>  
+              </div>
+          </a>
+
+          <a href="https://kratosrepo.github.io/cricket-live/skymix" class="site-card" _self="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/kratos877/picx-images-hosting@master/20231211/download.3d1jhhdehdw0.webp" alt="Sky sports Mix">
+              <div class="site-info">
+                  <h2>Sky sports Mix</h2>  
+              </div>
+          </a>-->
+          <!--<a href="https://kratosrepo.github.io/cricket-live/fox501" class="site-card" _self="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/505.9oa80paqmnc.webp" alt="fox 501 HD">
+                <div class="site-info">
+                    <h2>Fox 501 HD</h2> 
+                </div>
+            </a>
+          <a href="https://kratosrepo.github.io/cricket-live/fox505" class="site-card" _self="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/501.au16dt96m8w.webp" alt="fox 505 HD">
+                <div class="site-info">
+                    <h2>Fox 505 HD</h2> 
+                </div>
+            </a>-->
+          
+            <!-- Add more site cards as needed -->
+        </div>
+
+        <!--<div class="announcement">
+            <p>Player Links: <a href="https://kratosrepo.github.io/cricket-live/m3u8" _self="_blank"
+                    style="color: #ffffff;">M3U8 Player</a> |
+                <a href="https://kratosrepo.github.io/cricket-live/mpd" _self="_blank"
+                    style="color: #ffffff;">MPD Player with Keys</a> |
+                <a href="https://kratosrepo.github.io/cricket-live/mpdLI" _self="_blank"
+                    style="color: #ffffff;">MPD Player with License</a></p>
+        </div>
+    </div>-->
+
+
+
+</body></html>
