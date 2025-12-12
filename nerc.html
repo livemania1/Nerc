@@ -1,111 +1,251 @@
-
-
-<!DOCTYPE html><html><head>
-
-     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" type="image/png" sizes="250x250">
+<meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js" crossorigin="anonymous"></script><style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css" crossorigin="anonymous">
+    <title>Cm</title>
 
     <style>
 
-        /* Overflow menu style */
+        body, html {
 
-        
+            margin: 0;
 
-        .shaka-overflow-menu {
+            padding: 0;
 
-            background-color: rgb(41, 41, 163);
+            width: 100%;
 
-            color: rgb(153, 153, 153);
+            height: 100%;
 
-        }
+            overflow: hidden;
 
-        
-
-        .shaka-overflow-menu button:hover {
-
-            background-color: rgb(45, 45, 45);
+            position: relative;
 
         }
 
-        
+        iframe {
 
-        .shaka-overflow-button-label {
+            width: 100%;
 
-            color: rgb(245, 245, 245);
+            height: 100%;
 
-        }
+            border: none;
 
-        
+            position: absolute;
 
-        .shaka-current-selection-span {
+            top: 0;
 
-            color: rgb(202, 202, 202);
+            left: 0;
 
-        }
-
-        
-
-        .material-icons-round {
-
-            color: rgb(230, 230, 230);
+            z-index: 1;
 
         }
 
-        
+        .tg-banner {
 
-        /* Overflow sub menu style */
+            position: absolute;
 
-        
+            top: 16px;
 
-        .shaka-settings-menu {
+            left: 20px;
 
-            background-color: rgb(35, 35, 35);
+            background: linear-gradient(135deg, #1da1f2, #0077b5);
 
-            color: rgb(255, 255, 255);
+            border-radius: 12px;
+
+            padding: 16px 22px; /* Increased padding by 4px */
+
+            display: flex;
+
+            align-items: center;
+
+            color: white;
+
+            text-decoration: none;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+            z-index: 1000;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+            cursor: pointer;
 
         }
 
-        
+        .tg-banner:hover {
 
-        .shaka-settings-menu button {
+            transform: translateY(-5px);
 
-            color: rgb(255, 255, 255);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 
         }
 
-        
+        .tg-icon {
 
-        .shaka-settings-menu button:hover {
+            width: 36px;
 
-            background-color: rgb(45, 45, 45);
+            height: 36px;
+
+            margin-right: 12px;
+
+            border-radius: 50%;
+
+            border: 2px solid white;
+
+            background-color: #ffffff40;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+
+        }
+
+        .tg-icon img {
+
+            width: 24px;
+
+            height: 24px;
 
         }
 
     </style>
 
-</head>
+<style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection"></head>
 
-<body bgcolor="black" style="margin:0"><center>
+<body>
+
+    <div class="tg-banner" onclick="window.location.href='https://telegram.me/footballs_streaming';">
+
+        <div class="tg-icon">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+
+        </div>
+
+        Join @Cm
+
+    </div>
 
     
 
-        <div data-shaka-player-container="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover" class="shaka-mobile shaka-video-container" shaka-controls="true">
+<html>
+<head>
+<title>LM</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css"/>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script language="javascript">
 
-            <video autoplay="" muted="" data-shaka-player="" id="video" poster="https://disneystar.com/media/2237/ss1-hd-hindi.jpg" style="width:100%;height:100%" class="shaka-video" src="blob:https://criccoder.pages.dev/99ce4605-c215-4503-aac3-c93596dc5802"></video>
+// alert('Join Our Telegram For Latest update')
+         if (confirm("Join Our Telegram Channel @footballs_streaming For Latest Update") == true) {
+         window.open("https://telegram.me/footballs_streaming/", '_blank');
+     }
+</script>'));</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const video = document.querySelector("video");
+        const source = 'https://hugh.cdn.rumble.cloud/live/kd32s8ur/slot-137/1env-ytu4_1080p/chunklist_DVR.m3u8';
+        const defaultOptions = {};
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(source);
+            hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+                const availableQualities = hls.levels.map((l) => l.height)
+                defaultOptions.controls =
+                    [
+                        'play-large',
+                        'restart',
+                        'rewind',
+                        'play',
+                        'fast-forward',
+                        'progress',
+                        'current-time',
+                        'duration',
+                        'mute',
+                        'volume',
+                        'captions',
+                        'settings',
+                        'pip',
+                        'airplay',
+                        'download',
+                        'fullscreen',
+                    ];
+                defaultOptions.quality = {
+                    default: availableQualities[0],
+                    options: availableQualities,
+                    forced: true,
+                    onChange: (e) => updateQuality(e),
+                }
 
-<div class="shaka-controls-container"><div class="shaka-scrim-container"></div><div class="shaka-play-button-container"><button class="shaka-play-button shaka-no-propagation" icon="pause" aria-label="Pause"></button></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div><div class="shaka-controls-button-panel shaka-show-controls-on-mouse-over"><button class="shaka-small-play-button material-icons-round shaka-tooltip" aria-label="Pause">pause</button><button class="shaka-mute-button material-icons-round shaka-tooltip" aria-label="Unmute">volume_off</button><div class="shaka-range-container shaka-volume-bar-container" style="background: linear-gradient(to right, rgb(255, 69, 0) 0%, rgb(63, 187, 1) 0%, rgb(63, 187, 1) 100%);"><input class="shaka-range-element shaka-volume-bar" type="range" step="any" min="0" max="1" aria-label="Volume"></div><div class="shaka-spacer" aria-hidden="true"></div><button class="shaka-current-time" aria-label="Skip ahead to live">- 0:01</button><button class="shaka-overflow-button shaka-resolution-button shaka-tooltip-status" shaka-status="Auto" aria-label="Resolution"><i class="material-icons-round">settings</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Resolution</span><span class="shaka-current-selection-span">Auto</span></label></button><button class="shaka-fullscreen-button material-icons-round shaka-tooltip" aria-label="Full screen">fullscreen</button><button class="shaka-overflow-menu-button shaka-no-propagation material-icons-round shaka-tooltip" aria-label="More settings">more_vert</button></div><div class="shaka-range-container shaka-seek-bar-container" style="background: linear-gradient(to right, rgb(63, 187, 1) 99.5988%, rgb(63, 187, 1) 99.5988%, rgb(63, 187, 1) 99.8566%, rgb(35, 99, 3) 99.8566%, rgb(35, 99, 3) 100%, rgb(41, 41, 163) 100%);"><div class="shaka-ad-markers"></div><input class="shaka-range-element shaka-seek-bar shaka-no-propagation shaka-show-controls-on-mouse-over" type="range" step="any" min="1723731297.46" max="1723732156.46" aria-label="Seek"></div></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-resolutions"><button class="shaka-back-to-overflow-button" aria-label="Resolution"><i class="material-icons-round">close</i><span>Resolution</span></button><button class="explicit-resolution"><span>1080p</span></button><button class="explicit-resolution"><span>720p</span></button><button class="explicit-resolution"><span>540p</span></button><button class="explicit-resolution"><span>480p</span></button><button class="explicit-resolution"><span>360p</span></button><button class="explicit-resolution"><span>270p</span></button><button class="explicit-resolution"><span>180p</span></button><button class="shaka-enable-abr-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">Auto</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-overflow-menu shaka-no-propagation shaka-show-controls-on-mouse-over shaka-hidden"><button class="shaka-overflow-button shaka-caption-button shaka-tooltip-status shaka-hidden" aria-pressed="false" aria-label="Captions" shaka-status="Off"><i class="material-icons-round">closed_caption</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Captions</span><span class="shaka-current-selection-span">Off</span></label></button><button class="shaka-overflow-button shaka-resolution-button shaka-tooltip-status" shaka-status="Auto" aria-label="Resolution"><i class="material-icons-round">settings</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Resolution</span><span class="shaka-current-selection-span">Auto</span></label></button><button class="shaka-overflow-button shaka-language-button shaka-tooltip-status" aria-label="Language" shaka-status="हिन्दी"><i class="material-icons-round">language</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Language</span><span class="shaka-current-selection-span">हिन्दी</span></label></button><button class="shaka-pip-button shaka-tooltip shaka-hidden" aria-label="Enter Picture-in-Picture"><i class="material-icons-round">picture_in_picture_alt</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Picture-in-Picture</span><span class="shaka-current-selection-span">Off</span></label></button><button class="shaka-cast-button shaka-tooltip shaka-hidden" aria-pressed="false" aria-label="Cast..."><i class="material-icons-round">cast</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Cast...</span><span class="shaka-current-selection-span">Off</span></label></button><button class="shaka-overflow-button shaka-playbackrate-button shaka-tooltip-status" aria-label="Playback speed" shaka-status="0x"><i class="material-icons-round">slow_motion_video</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Playback speed</span><span class="shaka-current-selection-span">0x</span></label></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-text-languages"><button class="shaka-back-to-overflow-button" aria-label="Back"><i class="material-icons-round">arrow_back</i><span>Captions</span></button><button class="shaka-turn-captions-off-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">Off</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-resolutions"><button class="shaka-back-to-overflow-button" aria-label="Resolution"><i class="material-icons-round">arrow_back</i><span>Resolution</span></button><button class="explicit-resolution"><span>1080p</span></button><button class="explicit-resolution"><span>720p</span></button><button class="explicit-resolution"><span>540p</span></button><button class="explicit-resolution"><span>480p</span></button><button class="explicit-resolution"><span>360p</span></button><button class="explicit-resolution"><span>270p</span></button><button class="explicit-resolution"><span>180p</span></button><button class="shaka-enable-abr-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">Auto</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-audio-languages"><button class="shaka-back-to-overflow-button" aria-label="Back"><i class="material-icons-round">arrow_back</i><span>Language</span></button><button aria-selected="true"><span class="shaka-chosen-item">हिन्दी</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button><button><span>मराठी</span></button><button><span>Unrecognized (gu)</span></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-playback-rates"><button class="shaka-back-to-overflow-button" aria-label="Back"><i class="material-icons-round">arrow_back</i><span>Playback speed</span></button><button><span>0.5x</span></button><button><span>0.75x</span></button><button><span>1x</span></button><button><span>1.25x</span></button><button><span>1.5x</span></button><button><span>1.75x</span></button><button><span>2x</span></button></div></div><div class="shaka-client-side-ad-container shaka-hidden"></div><div class="shaka-spinner-container"><div class="shaka-spinner"><svg class="shaka-spinner-svg" viewBox="0 0 30 30"><circle class="shaka-spinner-path" cx="15" cy="15" r="14.5" fill="none" stroke-width="1" stroke-miterlimit="10"></circle></svg></div></div><div class="shaka-text-container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;"></div></div></center>
+                const player = new Plyr(video, defaultOptions);
+            });
+            hls.attachMedia(video);
+            window.hls = hls;
+        } else {
+            const player = new Plyr(video, defaultOptions);
+        }
+
+        function updateQuality(newQuality) {
+            window.hls.levels.forEach((level, levelIndex) => {
+                if (level.height === newQuality) {
+                    console.log("Found quality match with " + newQuality);
+                    window.hls.currentLevel = levelIndex;
+                }
+            });
+        }
+    });
+
+</script>
+
+  </body>
+  </html>
+
+    <script>
+
+        // Prevent the default action of the link
+
+        document.querySelector('.tg-banner').addEventListener('click', function(event) {
+
+            event.preventDefault();
+
+        });
+
+    </script>
 
 <script>
 
-    if(confirm("Join Our Telegram Channel @crc live ")) { window.location.href = "https://telegram.me/sports_live_linkss" }
+var a = confirm("Join For More Links!!");
 
-    async function init(){let e=document.getElementById("video"),r=e.ui,n=r.getControls(),o=n.getPlayer();o.configure({drm:{clearKeys:{"c8fd15eee7055457a3df23d5955845eb":"78dd68f5394edc18f24b4801e55f0671"}}}),r.configure({controlPanelElements:["play_pause","mute","volume","spacer","time_and_duration","quality","fullscreen","overflow_menu"],'volumeBarColors':{base:'rgba(63, 187, 1, 1)',level:'rgb(255, 69, 0)',},'seekBarColors':{base:'rgb(41, 41, 163)',buffered:'rgb(35, 99, 3)',played:'rgba(63, 187, 1, 1)',}}),window.player=o,window.ui=r,o.addEventListener("error",onPlayerErrorEvent),n.addEventListener("error",onUIErrorEvent);try{await o.load("https://bpprod3catchup.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/test.mpd"),console.log("The video has now been loaded!")}catch(a){onPlayerError(a)}}function onPlayerErrorEvent(e){onPlayerError(event.detail)}function onPlayerError(e){console.error("Error code",e.code,"object",e)}function onUIErrorEvent(e){onPlayerError(event.detail)}function initFailed(e){console.error("Unable to load the UI library!")}document.addEventListener("shaka-ui-loaded",init),document.addEventListener("shaka-ui-load-failed",initFailed);
+if(a==true){
 
-</script>
+  window.location.href = "https://telegram.me/footballs_streaming";
+
+}
+
+      
+
+      function welcome(){
+
+ window.open("https://telegram.me/footballs_streaming")
+
+      }
+
+    </script>
+
+<noscript>You must enable JavaScript to see this text.</noscript>
 
 </body></html>
