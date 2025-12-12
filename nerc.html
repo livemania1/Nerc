@@ -1,390 +1,52 @@
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cric Coder</title>
-  <style>
-      body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #333;
-          color: #ffffff;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          text-align: center;
-          font-size: 14px;
-          line-height: 1.6;
-      }
-
-      header {
-          background-color: #222;
-          color: #ffffff;
-          text-align: center;
-          padding: 1em 0;
-          box-sizing: border-box;
-          font-size: 1.5em;
-          border-bottom: 2px solid #444;
-          margin-bottom: 10px;
-      }
-
-      header h1 {
-          margin: 0;
-          font-size: 1.5em;
-      }
-
-      .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 10px;
-          box-sizing: border-box;
-      }
-
-      .site-grid {
-          display: grid;
-          gap: 10px;
-          margin-top: 10px;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      }
-
-      .site-card {
-          background-color: #444;
-          border: 1px solid #333;
-          border-radius: 18px;
-          overflow: hidden;
-          transition: transform 0.3s ease-in-out;
-          text-decoration: none;
-          color: #ffffff;
-          display: flex;
-          flex-direction: column;
-          margin: 0 auto;
-      }
-
-      .site-card:hover {
-          transform: scale(1.05);
-      }
-
-      .site-card img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          border-radius: 18px 18px 0 0;
-      }
-
-      .site-info {
-          padding: 10px;
-          text-align: center;
-          flex-grow: 1;
-      }
-
-      .site-info h2 {
-          margin: 0;
-          font-size: 1.2em;
-      }
-
-      .site-link {
-          margin-top: 10px;
-          color: #ffffff;
-          text-decoration: none;
-          background-color: #3498db;
-          padding: 10px;
-          border-radius: 5px;
-          display: inline-block;
-          transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .site-link:hover {
-          background-color: #2c3e50;
-          color: #ffffff;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .announcement {
-          background-color: #444;
-          color: #ffffff;
-          padding: 10px;
-          margin: 15px 0;
-          border-radius: 20px;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .announcement p {
-          margin: 0;
-          font-size: 1.0em;
-      }
-
-      .rectangle {
-          width: 100%;
-          height: 10px;
-          background-color: #3498db;
-          margin-top: 5px;
-          border-radius: 6px;
-      }
-
-      .github-button {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 20px;
-          font-size: 16px;
-          font-weight: bold;
-          text-decoration: none;
-          color: #fff;
-          background-color: #4CAF50;
-          border-radius: 5px;
-          transition: background-color 0.3s ease;
-      }
-
-      .github-button:hover {
-          background-color: #45a049;
-      }
-
-      .github-icon {
-          width: 30px;
-          height: 30px;
-          margin-right: 10px;
-      }
-    .telegram-button {
-          display: inline-flex;
-          align-items: center;
-          padding: 10px 20px;
-          font-size: 16px;
-          font-weight: bold;
-          text-decoration: none;
-          color: #fff;
-          background-color: #0088cc; /* Use the color you prefer for Telegram */
-          border-radius: 5px;
-          margin-left: 10px; /* Adjust the margin as needed */
-          transition: background-color 0.3s ease;
-      }
-
-      .telegram-button:hover {
-          background-color: #006699; /* Adjust the hover color as needed */
-      }
-
-      .telegram-icon {
-          width: 30px;
-          height: 30px;
-          margin-right: 10px;
-      }
-
-      /* Media Query for Small Screens */
-      @media only screen and (max-width: 600px) {
-          .site-card {
-              width: 100%;
-          }
-
-          .site-grid {
-              grid-template-columns: repeat(3, 1fr);
-          }
-      }
-  </style>
-<style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection"></head>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vs1</title>
+   
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+</head>
 <body>
-  <header>
-      <h1>CRIC CODER</h1>
-      <!-- GitHub Star Button -->
-    <a href="https://telegram.me/criccoder" class="telegram-button" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240104/Telegram_logo.svg.4prhaum59ki0.webp" alt="Telegram" class="telegram-icon">
-          Join us on Telegram
-      </a>
-  </header>
-         
-        <div class="site-grid">
+    <div id="player-container">
+        <video preload="none" id="player" autoplay controls crossorigin></video>
+    </div>
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
 
-       
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.querySelector("video");
+            const source = 'https://foxenglish.pages.dev/playlist.m3u8';
+            const defaultOptions = {};
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(source);
+                hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+                    const availableQualities = hls.levels.map((l) => l.height)
+                    defaultOptions.quality = {
+                        default: availableQualities[0],
+                        options: availableQualities,
+                        forced: true,
+                        onChange: (e) => updateQuality(e),
+                    }
 
-              <!--<a href="Link" class="site-card" _self="_blank">
-                <img src="https://v3img.voot.com/v3Storage/assets/ind_vs_afg_series_preview_clean_ctv-1704912109161.jpg" alt="Site 2">
-                <div class="site-info">
-                    <h2>IND VS AFG HINDI</h2>  
-                </div>
-            </a>
+                    const player = new Plyr(video, defaultOptions);
+                });
+                hls.attachMedia(video);
+                window.hls = hls;
+            } else {
+                const player = new Plyr(video, defaultOptions);
+            }
 
-            <a href="Link" class="site-card" _self="_blank">
-                <img src="https://v3img.voot.com/v3Storage/assets/ind_vs_afg_series_preview_clean_ctv-1704912109161.jpg" alt="Site 2">
-                <div class="site-info">
-                    <h2>IND VS AFG ENGLISH</h2>  
-                </div>
-                  </a>   <!-- 
-         <!-- <a href="https://kratosrepo.github.io/cricket-live/sports18khel" class="site-card" _self="_blank">
-              <img src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sports18_Khel.png" alt="sports 18 khel">
-              <div class="site-info">
-                  <h2>sports 18 khel</h2>  
-              </div>
-          </a>-->
-
-            <!--<a href="https://kratosrepo.github.io/cricket-live/sports18HD" class="site-card" _self="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/Sports18_1_HD.4gj2dorrwoi0.webp" alt="Sports18 1 HD">
-                <div class="site-info">
-                    <h2>Sports18 1 HD</h2> 
-                </div>
-            </a>-->
-
-            <!--<a href="https://kratosrepo.github.io/cricket-live/sports18HD(alt)" class="site-card" _self="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/Sports18_1_HD.4gj2dorrwoi0.webp" alt="Sports18 1 HD(alt)">
-                <div class="site-info">
-                    <h2>Sports18 1 HD(alt)</h2>  
-                </div>-->
-            
-
-          
-
-          <a href="https://starshindi-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://img.hotstar.com/image/upload/sources/r1/cms/prod/7198/597198-h.jpg" alt="Sports 1 Hindi HD">
-              <div class="site-info">
-                  <h2>Star Sports 1 Hindi </h2>  
-              </div>
-          </a>
-           
-         <a href="https://select1-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_2x/sources/r1/cms/prod/1181/661181-h" alt="Sports Select 1 HD">
-              <div class="site-info">
-                  <h2>Star Sports Select 1 </h2>  
-              </div>
-          </a>
-           <a href="https://select2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_2x/sources/r1/cms/prod/1172/661172-h" alt="Sports 1 Hindi HD">
-              <div class="site-info">
-                  <h2>Star Sports Select 2 </h2>  
-              </div>
-          </a>
-
-          <a href="https://stareng-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="
-              https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_2x/sources/r1/cms/prod/1167/661167-h" alt="Star Sports 1 HD">
-              <div class="site-info">
-                  <h2>Star Sports 1 HD</h2>  
-              </div>
-          </a>
-
-          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_2x/sources/r1/cms/prod/1168/661168-h" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Star Sports 2 HD</h2>  
-              </div>
-          </a>
-         <!-- <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/hMzp5kJ/New-Project-4-4-FF9753.png" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Sony Ten 1 HD</h2>  
-              </div>
-          </a>
-          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/DMj4fXx/New-Project-4-7427-E68.png" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Sony Ten 2 HD</h2>  
-              </div>
-          </a>
-          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/DRRL1FF/New-Project-4-5861683.png" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Sony Ten 3 HD</h2>  
-              </div>
-          </a>
-          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/8b484B2/New-Project-4-286-C136.png" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Sony Ten 4 HD</h2>  
-              </div>
-          </a>
-          <a href="https://stareng2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/4WRynLH/New-Project-4-9-DA8-AB0.png" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Sony Ten 5 HD</h2>  
-              </div>
-          </a>
-          <a href="" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/7WDkngd/image-downloader-1705144411795-png.webp" alt="Star Sports 2 HD">
-              <div class="site-info">
-                  <h2>Sports 18-1 Hd</h2>  
-              </div>
-          </a>-->
-
-          <a href="Astro-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://linear-poster.astro.com.my/prod/poster/ivp_default_10000229_IVP_LAND_586x330.jpg" alt="Astro Cricket">
-              <div class="site-info">
-                  <h2>Astro Cricket</h2>  
-              </div>
-          </a>
-
-          <a href="https://willowhd-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/sQxVw8j/image-downloader-1704809062470.jpg" alt="Willow Cricket">
-              <div class="site-info">
-                  <h2>Willow Cricket</h2>  
-              </div>
-          </a>
-
-          <a href="https://skycric-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.postimg.cc/PqxxpFtV/sky-cricket.jpg" alt="Sky Sports Cricket">
-              <div class="site-info">
-                  <h2>Sky Sports Cricket</h2>  
-              </div>
-          </a>
-           <a href="https://tencricket-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/3Wh1kPb/image-downloader-1705081842497.jpg" alt="Sky Sports Cricket">
-              <div class="site-info">
-                  <h2>Ten Cricket</h2>  
-              </div>
-          </a>
-
-
-          <!--<a href="https://kratosrepo.github.io/cricket-live/skymain" class="site-card" _self="_blank">
-              <img src="https://cdn.jsdelivr.net/gh/kratos877/picx-images-hosting@master/20231227/Sky-sports-main-event.2jqhzbjq3t20.webp" alt="Sky sports Mix">
-              <div class="site-info">
-                  <h2>Sky sports MAin Event</h2>  
-              </div>
-          </a>
-
-          <a href="https://kratosrepo.github.io/cricket-live/skymix" class="site-card" _self="_blank">
-              <img src="https://cdn.jsdelivr.net/gh/kratos877/picx-images-hosting@master/20231211/download.3d1jhhdehdw0.webp" alt="Sky sports Mix">
-              <div class="site-info">
-                  <h2>Sky sports Mix</h2>  
-              </div>
-          </a>-->
-          <!--<a href="https://kratosrepo.github.io/cricket-live/fox501" class="site-card" _self="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/505.9oa80paqmnc.webp" alt="fox 501 HD">
-                <div class="site-info">
-                    <h2>Fox 501 HD</h2> 
-                </div>
-            </a>
-          <a href="https://kratosrepo.github.io/cricket-live/fox505" class="site-card" _self="_blank">
-                <img src="https://cdn.jsdelivr.net/gh/KratosRepo/picx-images-hosting@master/20240105/501.au16dt96m8w.webp" alt="fox 505 HD">
-                <div class="site-info">
-                    <h2>Fox 505 HD</h2> 
-                </div>
-            </a>-->
-          <a href="https://tnt1-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/Jj1vGGK/Cric-streaming-tnt1.jpg" alt="TNT Sports 1">
-              <div class="site-info">
-                  <h2>TNT Sports 1</h2>  
-              </div>
-          </a>
-
-          <a href="https://tnt2-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/CWyJbQy/Cric-streaming-tnt2.jpg" alt="TNT Sports 2">
-              <div class="site-info">
-                  <h2>TNT Sports 2</h2>  
-              </div>
-          </a>
-
-          <a href="https://tnt3-criccoder.vercel.app/" class="site-card" _self="_blank">
-              <img src="https://i.ibb.co/B29F3rB/Cric-streaming.jpg" alt="TNT Sports 3">
-              <div class="site-info">
-                  <h2>TNT Sports 3</h2>  
-              </div>
-          </a>
-
-            <!-- Add more site cards as needed -->
-        </div>
-
-        <!--<div class="announcement">
-            <p>Player Links: <a href="https://kratosrepo.github.io/cricket-live/m3u8" _self="_blank"
-                    style="color: #ffffff;">M3U8 Player</a> |
-                <a href="https://kratosrepo.github.io/cricket-live/mpd" _self="_blank"
-                    style="color: #ffffff;">MPD Player with Keys</a> |
-                <a href="https://kratosrepo.github.io/cricket-live/mpdLI" _self="_blank"
-                    style="color: #ffffff;">MPD Player with License</a></p>
-        </div>
-    </div>-->
-
-
-
-</body></html>
+            function updateQuality(newQuality) {
+                window.hls.levels.forEach((level, levelIndex) => {
+                    if (level.height === newQuality) {
+                        console.log("Found quality match with " + newQuality);
+                        window.hls.currentLevel = levelIndex;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
