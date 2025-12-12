@@ -1,73 +1,10 @@
-<!DOCTYPE html>
+<iframe allow="encrypted-media" allowfullscreen="yes" frameborder="510" height="510" id="streamIframe" marginheight="500" marginwidth="0" name="streamframe" scrolling="no" src="http://tssm.pages.dev/tssm54.html"height="500%" width="100%" ></iframe>
+
 <script language="javascript">
 
 // alert('Join Our Telegram For Latest update')
-         if (confirm("Join Our Telegram Channel @footballs_streaming For Latest Update") == true) {
-         window.open("https://telegram.me/footballs_streaming/", '_blank');
+         if (confirm("Join Our Telegram Channel @cricket_Mania_24 For Latest Update") == true) {
+         window.open("https://t.me/sports_live_linkss/", '_blank');
      }
-</script></script>
-<html>
-  <head>
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css">
-    <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-  </head>
-  <body>
-    <div data-shaka-player-container style="max-width:500vw;max-height:500vh"
-     data-shaka-player-cast-receiver-id="07AEE832">
- <video autoplay data-shaka-player id="video" style="postion:fixed;top:0;left:0;display:flex;justify-content:center;align-items:center;width:100%;height:100%"></video>
-</div>
-    <script>
-        const manifestUri =
-            "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd";
-        
-        async function init() {
-          const video = document.getElementById('video');
-          const ui = video['ui'];
-          const controls = ui.getControls();
-          const player = controls.getPlayer();
-        
-          window.player = player;
-          window.ui = ui;
-            player.configure({
-                drm: {
-                    "clearKeys": {
-                        'a93c1cbfdccd23233bac13540c693e7f': '2f6ab2e6693eb847eff3c9da8f9d01fc'
-                    }
-                }
-            });
-        
-          player.addEventListener('error', onPlayerErrorEvent);
-          controls.addEventListener('error', onUIErrorEvent);
-        
-          try {
-            await player.load(manifestUri);
-            console.log('The video has now been loaded!');
-          } catch (error) {
-            onPlayerError(error);
-          }
-        }
-        
-        function onPlayerErrorEvent(errorEvent) {
-          onPlayerError(event.detail);
-        }
-        
-        function onPlayerError(error) {
-          console.error('Error code', error.code, 'object', error);
-        }
-        
-        function onUIErrorEvent(errorEvent) {
-          onPlayerError(event.detail);
-        }
-        
-        function initFailed(errorEvent) {
-          console.error('Unable to load the UI library!');
-        }
-        
-        document.addEventListener('shaka-ui-loaded', init);
-        document.addEventListener('shaka-ui-load-failed', initFailed);
-        </script>
-  </body>
-</html>
+</script>
+ 
